@@ -142,15 +142,15 @@
 
 1. Quelle est la différence entre une erreur `4xx` et une erreur `5xx` ? Qui est « fautif » dans chaque cas ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Une erreur `4xx` est une erreur du client : la demande est mauvaise, par exemple une page qui n'existe pas (404) ou un accès interdit (403, comme sur `/secret`). Une erreur `5xx` est une erreur du serveur : la demande était correcte mais le code a planté, comme le 500 que j'ai eu quand `request` n'était pas importé ou avec `int("bonjour")`.
 
 2. Comment fonctionne une redirection ? Qui fait la deuxième requête : le serveur ou le navigateur ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Le serveur répond avec un code `302` et un en-tête `Location` qui indique la nouvelle adresse (ici `/`). C'est le navigateur qui fait ensuite automatiquement une deuxième requête vers cette adresse. Dans l'onglet Réseau, on voit bien 2 requêtes pour `/home` : une en 302 puis une en 200.
 
 3. Donnez un exemple de situation où un vrai site utilise une redirection.
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Après une connexion réussie, le site redirige vers la page d'accueil ou le tableau de bord. Autres exemples : un site qui passe de `http://` à `https://`, ou une page qui a changé d'adresse.
 
 ---
 
