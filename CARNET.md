@@ -15,11 +15,11 @@
 
 1. Où se trouve physiquement le code qui fabrique votre page : sur votre ordinateur, sur GitHub ou sur PythonAnywhere ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Sur PythonAnywhere. GitHub sert seulement à stocker le code, et mon ordinateur ne fait qu'afficher la page. C'est le serveur PythonAnywhere qui éxecute la page.
 
 2. Pourquoi votre voisin(e) peut-il voir votre site, alors que vous n'avez rien installé sur son ordinateur ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Le site tourne sur un serveur connecté à Internet en permanence. N'importe quel navigateur peut lui envoyer une requête et recevoir la page. Il n'y a rien à installer, un navigateur suffit.
 
 ---
 
@@ -27,15 +27,15 @@
 
 1. Dans l'URL `https://www.google.com/maps`, quel est le nom de domaine ? Quel est le chemin ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Le nom de domaine est `www.google.com` et le chemin est `/maps`.
 
 2. Que veut dire le message *Not Found* ? Qui l'a envoyé : votre navigateur ou le serveur ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Ça veut dire que la page demandée n'existe pas, parce qu'aucune route ne correspond à cette adresse. C'est le serveur qui l'envoie (erreur 404).
 
 3. Que se passe-t-il si deux fonctions portent le même nom dans `flask_app.py` ? (Indice : essayez, puis lisez l'Error log.)
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Flask plante au démarrage avec l'erreur `AssertionError: View function mapping is overwriting an existing endpoint function`. Le site ne marche plus et affiche "Something went wrong".
 
 ---
 
@@ -43,15 +43,15 @@
 
 1. Quelle est la différence entre ce que le serveur **envoie** et ce que le navigateur **affiche** ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Le serveur envoie du simple texte avec des balises HTML. Le navigateur interprète ces balises et affiche une page mise en forme (titres, listes, images…).
 
 2. À quoi servent les balises `<h1>`, `<p>`, `<ul>` et `<li>` ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ `<h1>` sert pour un titre principal, `<p>` pour un paragraphe, `<ul>` pour une liste à puces et `<li>` pour un élément de cette liste.
 
 3. Pourquoi l'image s'affiche-t-elle alors qu'elle n'est pas sur votre serveur ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ La balise `<img>` contient l'adresse de l'image sur un autre serveur (Wikimedia). Le navigateur va la télécharger lui-même directement là-bas.
 
 ---
 
@@ -59,11 +59,11 @@
 
 1. Pourquoi est-ce une bonne idée de séparer le code Python et le HTML ? (Pensez à une équipe avec un développeur et un graphiste.)
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Chacun travaille sur son fichier sans gêner l'autre : le développeur sur le Python, le graphiste sur le HTML. Le code est aussi plus lisible, et un même template peut être réutilisé avec des données différentes.
 
 2. Les `{{ prenom }}` sont-ils remplacés par le serveur ou par le navigateur ? Comment l'avez-vous vérifié ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Par le serveur. En affichant le code source de la page (Cmd+Option+U), on voit directement "Adrien Szewc" : les `{{ }}` ont déjà disparu avant d'arriver au navigateur.
 
 ---
 
@@ -71,18 +71,17 @@
 
 1. Quelle est la différence de rôle entre le HTML et le CSS ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Le HTML définit la structure et le contenu de la page. Le CSS définit son apparence : couleurs, polices, marges.
 
 2. Pour afficher votre page `/presentation`, combien de fichiers le navigateur doit-il télécharger ? (Vous pourrez le vérifier à l'exercice suivant !)
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ 3 fichiers : la page HTML, le fichier `style.css` et l'image du logo Python.
 
 3. Pourquoi faut-il parfois faire **Ctrl + F5** pour voir les changements de CSS ?
 
-   > _Ma réponse :_ 
+   > _Ma réponse :_ Le navigateur garde le CSS en cache pour charger plus vite, donc il peut réutiliser l'ancienne version. Ctrl+F5 force le navigateur à retélécharger le fichier.
 
 ---
-
 ## 🟣 Exercice 6 — Espionner le navigateur
 
 1. Que signifie HTTP ? Qui envoie la **requête** et qui envoie la **réponse** ?
