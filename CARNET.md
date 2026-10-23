@@ -1,8 +1,8 @@
 # 📒 Mon carnet de bord
 
-**Nom :** 
+**Nom :** Szewc
 
-**Prénom :** 
+**Prénom :** Adrien
 
 **Adresse de mon site :** https://adriensz7.pythonanywhere.com
 
